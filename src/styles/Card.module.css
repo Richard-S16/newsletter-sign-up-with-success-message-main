@@ -1,7 +1,14 @@
 .card {
+  min-height: 100vh;
+  background-color: var(--white);
+
+  & > img {
+    width: 100%;
+  }
+
   /* Card Except Image */
   & > div {
-    margin: 2.25rem 1.5rem 0 1.5rem;
+    margin: 2.25rem 1.5rem 1rem 1.5rem;
 
     /* Input Container */
     & > div {
@@ -17,4 +24,30 @@
 
 .paragraph {
   margin-bottom: 1.5rem;
+}
+
+@media (min-width: 958px) {
+  .card {
+    display: flex;
+    align-items: center;
+    min-height: auto;
+    flex-direction: row-reverse;
+    background-color: var(--white);
+    border-radius: 2rem;
+
+    & > img {
+      width: auto;
+      padding: 1.5rem;
+    }
+
+    /* Card Except Image */
+    & > div {
+      width: 44%;
+    }
+  }
+
+  .title {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
 }

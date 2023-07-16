@@ -9,6 +9,6 @@
 
   &:hover {
     background: linear-gradient(90deg, var(--gradient));
-    box-shadow: 0 0.33rem 1.25rem var(--primary-color);
+    box-shadow: 0 0.25rem 1.25rem var(--primary-color);
   }
 }

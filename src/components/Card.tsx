@@ -1,21 +1,40 @@
+import { useEffect, useState } from "preact/hooks";
 import classes from "../styles/Card.module.css";
 import Button from "./Button";
 import Input from "./Input";
 import List from "./List";
 
 export default function Card() {
+  const [width, setWidth] = useState(window.innerWidth);
   const items = [
     "Product discovery and building what matters",
     "Measuring to ensure updates are a success",
     "And much more!",
   ];
 
+  useEffect(() => {
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+
+    return () => {
+      window.removeEventListener("resize", () => setWidth(window.innerWidth));
+    };
+  }),
+    [];
+
   return (
     <div class={classes.card}>
-      <img
-        src="/assets/images/illustration-sign-up-mobile.svg"
-        alt="Illustration sign up mobile"
-      />
+      {width >= 958 ? (
+        <img
+          src="/assets/images/illustration-sign-up-desktop.svg"
+          alt="Illustration sign up mobile"
+        />
+      ) : (
+        <img
+          src="/assets/images/illustration-sign-up-mobile.svg"
+          alt="Illustration sign up mobile"
+        />
+      )}
+
       <div>
         <h1 class={classes.title}>Stay updated!</h1>
         <p class={classes.paragraph}>
