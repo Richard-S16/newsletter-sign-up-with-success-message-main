@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  & label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  & input {
+    border: 1px solid var(--grey);
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    &::placeholder {
+      opacity: 0.75;
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--secondary-color) !important;
+    }
+  }
+}
