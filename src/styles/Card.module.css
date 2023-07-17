@@ -1,5 +1,6 @@
 .card {
   min-height: 100vh;
+  min-width: 100vw;
   background-color: var(--white);
 
   & > img {
@@ -20,10 +21,28 @@
 .title {
   font-size: 2.25rem;
   margin-bottom: 1rem;
+  line-height: normal;
 }
 
 .paragraph {
   margin-bottom: 1.5rem;
+}
+
+.card_subscribed {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--white);
+  padding: 10rem 1.5rem;
+
+  & > img {
+    margin-bottom: 2rem;
+  }
+
+  & > button {
+    position: relative;
+    bottom: -16rem;
+  }
 }
 
 @media (min-width: 958px) {
@@ -31,6 +50,7 @@
     display: flex;
     align-items: center;
     min-height: auto;
+    min-width: auto;
     flex-direction: row-reverse;
     background-color: var(--white);
     border-radius: 2rem;
@@ -49,5 +69,25 @@
   .title {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
+  }
+
+  .card_subscribed {
+    position: relative;
+    min-height: auto;
+    min-width: auto;
+    width: 516px;
+    height: 516px;
+    border-radius: 2rem;
+    background-color: var(--white);
+    padding: 3rem 5rem;
+
+    & > img {
+      margin-bottom: 2rem;
+    }
+
+    & > button {
+      position: relative;
+      bottom: -1rem;
+    }
   }
 }
