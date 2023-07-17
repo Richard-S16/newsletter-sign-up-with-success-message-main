@@ -1,7 +1,7 @@
 .list {
   padding-left: 0;
 
-  & > li {
+  & li {
     list-style: none;
     background: url("/assets/images/icon-list.svg") no-repeat;
     padding-left: 2.25rem;

@@ -3,7 +3,7 @@
   min-width: 100vw;
   background-color: var(--white);
 
-  & > img {
+  & img {
     width: 100%;
   }
 
@@ -35,13 +35,13 @@
   background-color: var(--white);
   padding: 10rem 1.5rem;
 
-  & > img {
+  & img {
     margin-bottom: 2rem;
   }
 
-  & > button {
+  & button {
     position: relative;
-    bottom: -16rem;
+    bottom: -18rem;
   }
 }
 
@@ -51,11 +51,14 @@
     align-items: center;
     min-height: auto;
     min-width: auto;
+    height: 640px;
+    width: 938px;
     flex-direction: row-reverse;
     background-color: var(--white);
     border-radius: 2rem;
+    transition: height 100ms, width 100ms;
 
-    & > img {
+    & img {
       width: auto;
       padding: 1.5rem;
     }
@@ -75,17 +78,18 @@
     position: relative;
     min-height: auto;
     min-width: auto;
-    width: 516px;
     height: 516px;
+    width: 516px;
     border-radius: 2rem;
     background-color: var(--white);
     padding: 3rem 5rem;
+    transition: height 100ms, width 100ms;
 
-    & > img {
+    & img {
       margin-bottom: 2rem;
     }
 
-    & > button {
+    & button {
       position: relative;
       bottom: -1rem;
     }
